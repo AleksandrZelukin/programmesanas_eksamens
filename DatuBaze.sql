@@ -1,31 +1,27 @@
 -- Tabulu struktūra
 
--- 1. Clients (Klienti)
--- Saglabā informāciju par klientiem.
+-- 1. Clients (Klienti) Saglabā informāciju par klientiem.
 -- ID (Primary Key) – unikāls klienta identifikators.
 -- Name – klienta vārds un uzvārds.
 -- PhoneNumber – klienta tālruņa numurs.
 -- Email – klienta e-pasta adrese.
 -- Address – klienta adrese.
 
--- 2. Farmers (Saimnieki)
--- Saglabā informāciju par saimniekiem, ar kuriem veikals sadarbojas.
+-- 2. Farmers (Saimnieki) Saglabā informāciju par saimniekiem, ar kuriem veikals sadarbojas.
 -- ID (Primary Key) – unikāls saimnieka identifikators.
 -- Name – saimnieka vārds un uzvārds.
 -- PhoneNumber – saimnieka tālruņa numurs.
 -- FarmName – saimniecības nosaukums.
 -- Location – saimniecības atrašanās vieta.
 
--- 3. Products (Produkti)
--- Saglabā informāciju par piedāvātajiem produktiem.
+-- 3. Products (Produkti) Saglabā informāciju par piedāvātajiem produktiem.
 -- ID (Primary Key) – unikāls produkta identifikators.
 -- Name – produkta nosaukums (piem., „Govs siers svaigs”).
 -- Unit – mērvienība (litrs, kilograms, grams).
 -- PricePerUnit – cena par vienību (piem., 1,50 €/litrā).
 -- FarmerID (Foreign Key) – atsauce uz tabulu Farmers, norādot produkta piegādātāju.
 
--- 4. Purchases (Iepirkumi)
--- Saglabā informāciju par klientu veiktajiem iepirkumiem.
+-- 4. Purchases (Iepirkumi) Saglabā informāciju par klientu veiktajiem iepirkumiem.
 -- ID (Primary Key) – unikāls iepirkuma identifikators.
 -- ClientID (Foreign Key) – atsauce uz tabulu Clients.
 -- ProductID (Foreign Key) – atsauce uz tabulu Products.
