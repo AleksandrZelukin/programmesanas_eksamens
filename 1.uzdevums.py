@@ -3,13 +3,17 @@
 # par transportlīdzekļiem CSDD datubāzē 
 # atbilstoši zemāk norādītajai informācijai, 
 # kā arī definēt šai klasei metodi, 
-# ar kuru izvada šādai klasei atbilstoša objekta īpašību vērtības. 
-# (4 punkti) 1.2. Izveidot vienu klases objektu ar zemāk minētiem testa datiem. 
-# (1 punkts) 1.3. Izmantot objekta metodi, lai izvadītu ekrānā visas definētās 
-# objekta īpašības. (1 punkts) Apstrādājamā informācija par transportlīdzekli – 
+# ar kuru izvada šādai klasei atbilstoša objekta īpašību vērtības. (4 punkti) 
+# 1.2. Izveidot vienu klases objektu ar zemāk minētiem testa datiem. (1 punkts) 
+# 1.3. Izmantot objekta metodi, lai izvadītu ekrānā visas definētās 
+# objekta īpašības. (1 punkts) 
+# Apstrādājamā informācija par transportlīdzekli – 
 # zīmols, modelis, reģistrācijas datums CSDD datubāzē formātā dd.mm.gggg, 
 # pilna masa kilogramos (bez mērvienības), degvielas veida apzīmējums 
-# (iespējamie apzīmējumi: B – benzīns, BG – benzīns/gāze, D – dīzeļdegviela, 
+# (iespējamie apzīmējumi: 
+# B – benzīns, 
+# BG – benzīns/gāze, 
+# D – dīzeļdegviela, 
 # E – elektriskais, 
 # BE – benzīna hibrīds, 
 # DE – dīzeļa hibrīds).

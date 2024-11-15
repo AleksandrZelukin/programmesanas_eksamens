@@ -8,10 +8,6 @@
 # Programmētāju komandai dots uzdevums izveidot datorprogrammu minētā robota darbināšanai.
 # Tev kā programmētāju komandas dalībniekam ir izvēlētā programmēšanas valodā jāsastāda
 # kods, kas realizē tālāk minētos uzdevumus.
-# VISC Vaļņu ielā 2, Rīgā, LV-1050
-# 29481647123802948164712380294816471238029481647123802948164720
-# Eksāmens programmēšanā (augstākais līmenis) Skolēna darba lapa 2023 7
-# 29481647123802948164712380294816471238029481647123802948164720
 # 2.1. Definēt:
 # • klasi kubs (1 punkts), kurai ir īpašības (1 punkts):
 # o malas garums centimetros, vesels skaitlis intervālā no 2 līdz 10 ieskaitot;
@@ -54,10 +50,6 @@
 # 2.11.1. parametra forma vērtība neatbilst nosacījumiem (1 punkts) un uzstāda objekta
 # parametra derīgums vērtību uz 0, citādi uzstāda derīguma vērtību uz 1 (1 punkts);
 # 2.11.2. kubu skaits blokā neatbilst nosacījumiem (1 punkts).
-# VISC Vaļņu ielā 2, Rīgā, LV-1050
-# 29481647123802948164712380294816471238029481647123802948164720
-# Eksāmens programmēšanā (augstākais līmenis) Skolēna darba lapa 2023 8
-# 29481647123802948164712380294816471238029481647123802948164720
 # 2.12. Izveidot klases bloks objektu, kas sastāv no 3 oranžas krāsas kubiem ar malas garumu
 # 5 centimetri, formas numuru 13, un piešķirt tam nosacījumiem atbilstošu nosaukumu (4 punkti).
 # 2.13. Izvadīt ekrānā izveidotā objekta nosaukumu un tilpumu (1 punkts).
