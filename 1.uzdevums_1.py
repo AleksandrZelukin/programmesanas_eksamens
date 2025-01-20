@@ -10,13 +10,13 @@
 # Apstrādājamā informācija par transportlīdzekli – 
 # zīmols, modelis, reģistrācijas datums CSDD datubāzē formātā dd.mm.gggg, 
 # pilna masa kilogramos (bez mērvienības), degvielas veida apzīmējums 
-# (iespējamie apzīmējumi: 
+# Iespējamie apzīmējumi: 
 # B – benzīns, 
 # BG – benzīns/gāze, 
 # D – dīzeļdegviela, 
 # E – elektriskais, 
 # BE – benzīna hibrīds, 
-# DE – dīzeļa hibrīds).
+# DE – dīzeļa hibrīds.
 
 from datetime import datetime
 
