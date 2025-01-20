@@ -1,3 +1,21 @@
+# 1.1. Uzrakstīt programmas koda bloku, kas definē piemērotu klasi informācijai par
+# transportlīdzekļiem CSDD datubāzē atbilstoši zemāk norādītajai informācijai, kā arī definēt šai
+# klasei metodi, ar kuru izvada šādai klasei atbilstoša objekta īpašību vērtības. (4 punkti)
+# 1.2. Izveidot vienu klases objektu ar zemāk minētiem testa datiem. (1 punkts)
+# 1.3. Izmantot objekta metodi, lai izvadītu ekrānā visas definētās objekta īpašības. (1 punkts)
+# Apstrādājamā informācija par transportlīdzekli – zīmols, modelis, reģistrācijas datums CSDD
+# datubāzē formātā dd.mm.gggg, pilna masa kilogramos (bez mērvienības), degvielas veida
+# apzīmējums (iespējamie apzīmējumi: B – benzīns, BG – benzīns/gāze, D – dīzeļdegviela,
+# E – elektriskais, BE – benzīna hibrīds, DE – dīzeļa hibrīds).
+# 
+# Testa dati:
+# zīmols: Audi
+# modelis: A4
+# reģistrācijas datums: 22.10.2019
+# pilna masa: 1800
+# degvielas veids: BG
+
+
 class Automobilis:
     def __init__(self,zimols,reg_datums,masa,degviels):
         self.zimols = zimols
