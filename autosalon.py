@@ -5,11 +5,14 @@ import itertools
 import datetime
 import fileinput
 import PySimpleGUI as sg
-sg.theme('DarkBlue')
-#theme_name_list = sg.theme_list()
-#print(theme_name_list)
- 
-class Produkts:
+# import sqlite3
+sg.theme('LightBlue')
+# theme_name_list = sg.theme_list()
+# print(theme_name_list)
+# con=sqlite3.connect("autosalon.db")
+# cur=sqlite3.connect()
+# cur.execute("""CREATE TABLE IF NOT EXISTS""")
+class Produkts():
     Prod_kategorija = "" #0- remonts 1 - ķim'.tir.
     Prod_nosaukums = "" # riepu balansešana, eļlas maiņa, salona kopšana, virsbuves mazgašanas un tml.
     Prod_cena = "" # 12 ~ 555
@@ -151,7 +154,7 @@ while True:
 
 #======================================= 3 sadala ===============
   elif event == 'Pakalpojums: veidot atskaiti teksta faila formata':
-    file=open("Pakalpojuma_atskaite.txt", "a")
+    file=open("Pakalpojuma_atskaite.txt", "a",encoding="UTF-8")
     file.write(str(prod.Produkts_info()))
     file.write("\n")
     file.close()
