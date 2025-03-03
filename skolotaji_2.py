@@ -37,7 +37,7 @@ def ievadi_datus():
     while True:
         tips = input("""Ievadiet skolotāja tipu 
                      1 - sākumskolas, 
-                     2 - vidusskolas, 
+                     3 - vidusskolas, 
                      0 - beigt: """)
         if tips == '0':
             break
@@ -46,7 +46,7 @@ def ievadi_datus():
             stundu_skaits_nedela = int(input("Ievadiet stundu skaitu nedēļā: "))
             klase = input("Ievadiet klasi: ")
             skolotaji.append(SakumskolasSkolotajs(uzvards, stundu_skaits_nedela, klase))
-        elif tips == '2':
+        elif tips == '3':
             uzvards = input("Ievadiet skolotāja uzvārdu: ")
             pirmais_prieksmets = input("Ievadiet pirmā priekšmeta nosaukumu: ")
             otrais_prieksmets = input("Ievadiet otrā priekšmeta nosaukumu: ")
