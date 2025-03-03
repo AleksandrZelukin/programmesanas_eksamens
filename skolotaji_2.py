@@ -63,3 +63,10 @@ def izdruka_skolotaji(skolotaji):
 
 skolotaji = ievadi_datus()
 izdruka_skolotaji(skolotaji)
+
+# Izvades piemērs:
+
+# Sākumskolas (tips – 1) skolotājs Bērziņš māca 15 stundas 2.a klasē.
+
+# Vidusskolas (tips – 3) skolotājs Ozols māca šādus priekšmetus: matemātika un datorika, kopā 20 stundas.
+
