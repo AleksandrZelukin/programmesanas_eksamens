@@ -1,7 +1,8 @@
 import requests
-response = requests.get('https://ss.lv')
+import json
+response = requests.get('https://github.com/AleksandrZelukin/12klase_flask_vietne/blob/main/templates/about.html')
 # print(response.status_code)
-# print(response.text)
+print(response.text)
 # print(response.json())
 # print(response.headers)
 # print(response.url)
@@ -18,7 +19,3 @@ response = requests.get('https://ss.lv')
 # print(response.reason)
 # print(response.text)
 
-query = {'q': 'BMW'}
-
-req = requests.get('<a href="https://ss.com</a>', params=query)
-req.url
