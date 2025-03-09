@@ -1,8 +1,8 @@
 import requests
 import json
-response = requests.get('https://github.com/AleksandrZelukin/12klase_flask_vietne/blob/main/templates/about.html')
+response = requests.get("https://github.com/SkolotajsZelukins/macibu_api/blob/main/saraksts.json") 
 # print(response.status_code)
-print(response.text)
+# print(response.text)
 # print(response.json())
 # print(response.headers)
 # print(response.url)
@@ -15,7 +15,7 @@ print(response.text)
 # print(response.cookies)
 # print(response.elapsed)
 # print(response.links)
-# print(response.ok)
+print(response.ok)
 # print(response.reason)
 # print(response.text)
 
