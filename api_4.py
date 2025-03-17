@@ -12,7 +12,7 @@ employees = [
 
 nextEmployeeId = 4
 3
-@app.route('/employees', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_employees():
  return jsonify(employees)
 
@@ -27,10 +27,10 @@ def get_employee(id):
  return next((e for e in employees if e['id'] == id), None)
 
 def employee_is_valid(employee):
- for key in employee.keys():
-   if key != 'name':
- 	return False
- return True
+  for key in employee.keys():
+    if key != 'name':
+ 	    return False
+  # return True
 
 @app.route('/employees', methods=['POST'])
 def create_employee():
@@ -70,4 +70,4 @@ def delete_employee(id: int):
  return jsonify(employee), 200
 
 if __name__ == '__main__':
-   app.run(port=5000)
+   app.run(host='0.0.0.0', port=5050)
