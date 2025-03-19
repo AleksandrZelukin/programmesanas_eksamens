@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "https://github.com/SkolotajsZelukins/macibu_api/blob/main/query.json"
-response = requests.get(url)
-data = response.json()  # Assuming the response is in JSON format
-print(data)
+import urllib.request
+url = 'https://data.gov.lv/dati/dataset/40d80be5-0c09-47c4-80f3-fad4bec19f33/resource/c32c7afd-0d05-44fd-8b24-1de85b4bf11d/download/meteo_stacijas.csv'  
+fileobj = urllib.request.urlopen(url)
+print(fileobj.read())
