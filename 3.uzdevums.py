@@ -66,12 +66,12 @@ try:
                 municipality = record.get("Municipality")
                 
                 # Pārbauda, vai pieņem atbilstošus atkritumus
-                if "x" in record.get("8 : Baterijas un akumulatori", "").lower():
-                    print(f"Baterijas un akumulatori: {address}, {municipality}")
-                if "x" in record.get("10 : Nolietotās riepas", "").lower():
-                    print(f"Nolietotās riepas: {address}, {municipality}")
-                if "x" in record.get("3 : Metāls", "").lower():
-                    print(f"Metāls: {address}, {municipality}")
+                # if "x" in record.get("8 : Baterijas un akumulatori", "").lower():
+                #     print(f"Baterijas un akumulatori: {address}, {municipality}")
+                # if "x" in record.get("10 : Nolietotās riepas", "").lower():
+                #     print(f"Nolietotās riepas: {address}, {municipality}")
+                # if "x" in record.get("3 : Metāls", "").lower():
+                #     print(f"Metāls: {address}, {municipality}")
 
 except requests.exceptions.RequestException as e:
     print("Radās kļūda, savienojoties ar API:", e)
