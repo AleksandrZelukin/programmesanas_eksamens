@@ -1,14 +1,14 @@
 import requests
 import json
-<<<<<<< HEAD
+
 url = requests.get("https://github.com/SkolotajsZelukins/macibu_api/blob/main/saraksts.json") 
 info = requests.get(url).json()
 print(info)
 print(info['result']['records'])
-response = requests.get("https://github.com/SkolotajsZelukins/macibu_api/blob/main/saraksts.json") 
+# response = requests.get("https://github.com/SkolotajsZelukins/macibu_api/blob/main/saraksts.json") 
 # print(response.status_code)
 # print(response.text)
-print(response.json())
+# print(response.json())
 # print(response.headers)
 # print(response.url)
 # print(response.encoding)
@@ -20,7 +20,7 @@ print(response.json())
 # print(response.cookies)
 # print(response.elapsed)
 # print(response.links)
-# print(response.ok)
+print(response.ok)
 # print(response.reason)
-# print(response.text)
+print(response.text)
 
