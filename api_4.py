@@ -3,10 +3,14 @@ import json
 from flask import Flask, jsonify, request
 app = Flask(__name__)
 
-employees = [
- { 'id': 1, 'name': 'Ashley' },
- { 'id': 2, 'name': 'Kate' },
- { 'id': 3, 'name': 'Joe' }
+skoleni = [
+ { 'id': 1, 'vards': 'Olga' },
+ { 'id': 2, 'vards': 'Inga' },
+ { 'id': 3, 'vards': 'Igors' },
+ { 'id': 4, 'vards': 'Ieva' },
+ { 'id': 5, 'vards': 'Ivans' },
+ { 'id': 6, 'vards': 'Ilgvars' },
+ { 'id': 7, 'vards': 'Ilze' }
 ]
 
 
