@@ -82,13 +82,13 @@ CREATE TABLE if NOT EXISTS produkts (
 # for row in cur.fetchall():
 #     print(row)
     
-cur.execute('''
-SELECT kafejnica.nosaukums, darbinieks.vards, darbinieks.uzvards, produkts.nosaukums, produkts.cena
-FROM kafejnica 
-JOIN darbinieks ON kafejnica.id_kafejnica = darbinieks.id_kafejnica
-JOIN produkts ON darbinieks.id_darbinieks = produkts.id_darbinieks
-''')
-for row in cur.fetchall():
-    print(row)
+# cur.execute('''
+# SELECT kafejnica.nosaukums, darbinieks.vards, darbinieks.uzvards, produkts.nosaukums, produkts.cena
+# FROM kafejnica 
+# JOIN darbinieks ON kafejnica.id_kafejnica = darbinieks.id_kafejnica
+# JOIN produkts ON darbinieks.id_darbinieks = produkts.id_darbinieks
+# ''')
+# for row in cur.fetchall():
+#     print(row)
 conn.commit()
 conn.close()
