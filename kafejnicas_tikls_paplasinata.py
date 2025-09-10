@@ -55,17 +55,13 @@ def ievad_datus_produkti():
     nos = input("Ievadi produkta nosaukumu: ")
     cen = float(input("Ievadi produkta cenu: "))
     kat = input("Ievadi produkta kategoriju: ")
-    darbinieks_id = input("Ievadi darbinieka ID: ")  # Pieņemam, ka produkts tiek pievienots pirmajam darbiniekam
+    darbinieks_id = input("Ievadi darbinieka ID: ")
 
-
-    kafejnica=(kaf, adr, tal)
-    darbinieki=(vards, uzvards, amats, alga, kafejnica_id)
-    pasutijums=(nos, cen, kat, darbinieks_id)
-
-    cur.execute('''INSERT INTO kafejnica (nosaukums, adrese, talrunis) VALUES (?, ?, ?)''', (kaf, adr, tal))
-    cur.execute('''INSERT INTO darbinieks (vards, uzvards, amats, alga, id_kafejnica) VALUES (?, ?, ?, ?, ?)''', (vards, uzvards, amats, alga, kafejnica_id))
-    cur.execute('''INSERT INTO produkts (nosaukums, cena, kategorija, id_darbinieks) VALUES (?, ?, ?, ?)''', (nos, cen, kat, darbinieks_id))
-    conn.commit()
+def print_kafejnicas():
+    cur.execute("SELECT * FROM kafejnica")
+    for row in cur.fetchall():
+        print(row) 
+        
 
 while True:
     print("Ko vēlies darīt?")
@@ -79,6 +75,7 @@ while True:
     if choice == '1':
         create_tables()
     elif choice == '2':
+        print_kafejnicas()
         ievad_datus_kafejnica()
     elif choice == '3':
         ievad_datus_darbinieki()
@@ -87,7 +84,8 @@ while True:
     elif choice == '5':
         break
     else:
-        print("Nederīga izvēle.")   
+        print("Nederīga izvēle.") 
+        
 
 cur.execute('''
 SELECT kafejnica.nosaukums, darbinieks.vards, darbinieks.uzvards, produkts.nosaukums, produkts.cena
