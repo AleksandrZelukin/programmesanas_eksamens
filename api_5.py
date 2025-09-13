@@ -10,7 +10,7 @@ data = [
     ['Charlie', '35', 'Chicago']
 ]
 
-with open('api_5.csv', mode='w', newline='') as file:
+with open('api_5.csv', mode='a', newline='') as file:
     csv_writer = csv.writer(file)
     csv_writer.writerows(data)
 
@@ -21,7 +21,7 @@ data = [
     {'Name': 'Charlie', 'Age': '35', 'City': 'Chicago'}
 ]
 
-with open('api_5.csv', mode='w', newline='') as file:
+with open('api_5.csv', mode='a', newline='') as file:
     fieldnames = ['Name', 'Age', 'City']
     csv_writer = csv.DictWriter(file, fieldnames=fieldnames)
     csv_writer.writeheader()
