@@ -3,7 +3,7 @@ import csv
 
 with open("agenti.csv", "r") as file:
     csv_reader = csv.reader(file)
-    headers = next(csv_reader)
+    # headers = next(csv_reader)
     pilseta = input("Ievadi pilsētu: ") # e.g., Rīga
     print(f"Agenti pilsētā {pilseta}:")
     for row in csv_reader:
