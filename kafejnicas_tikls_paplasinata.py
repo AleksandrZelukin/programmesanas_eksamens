@@ -95,5 +95,10 @@ JOIN produkts ON darbinieks.id_darbinieks = produkts.id_darbinieks
 ''')
 for row in cur.fetchall():
     print(row)
+cur.execute(''' SELECT darbinieks.vards,kafejnica.nosaukums from darbinieks,kafejnica where darbinieks.id_kafejnica=kafejnica.id_kafejnica ''')
+for row in cur.fetchall():
+    print(row)
+    
+
 conn.commit()
 conn.close()
