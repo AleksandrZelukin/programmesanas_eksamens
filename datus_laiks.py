@@ -1,4 +1,5 @@
 import sqlite3
+import datetime
 
 # Izveidojam savienojumu ar datubāzi (failā vai atmiņā)
 conn = sqlite3.connect("datus_laiks.db")
@@ -21,7 +22,7 @@ cur.executemany("insert into datumi_laiki (datums, nosaukums) values (?, ?)", [
     ("2024-03-17", "Īrijas nacionālais diena"),
     ])
 
-cur.execute("SELECT nosaukums, datums FROM datumi_laiki where datums > '2024-01-01'")
+cur.execute("SELECT nosaukums, datums FROM datumi_laiki where datums >= '2024-01-01'")
 
 rows = cur.fetchall()
 for row in rows:
