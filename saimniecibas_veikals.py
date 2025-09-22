@@ -3,7 +3,9 @@ import sqlite3
 # Izveidojam savienojumu ar datubāzi (failā vai atmiņā)
 conn = sqlite3.connect("saimniecibas_veikals.db")
 cur = conn.cursor()
-cur.execute("DROP TABLE IF EXISTS piegadataji")
+
+# Dzēšam tabulas, ja tās jau eksistē
+cur.execute("DROP TABLE IF EXISTS piegadataji") #ekzistējošo tabulu dzēšana, lai varētu izveidot no jauna
 cur.execute("DROP TABLE IF EXISTS produkti")
 cur.execute("DROP TABLE IF EXISTS cenas")
 cur.execute("DROP TABLE IF EXISTS iepirkumi")
