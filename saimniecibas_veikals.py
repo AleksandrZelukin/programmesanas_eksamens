@@ -53,25 +53,25 @@ CREATE TABLE IF NOT EXISTS iepirkumi (
 
 # Pievienojam piemēra datus
 cur.executemany("INSERT INTO piegadataji (nosaukums, kontakts) VALUES (?, ?)", [
-    ("Lauku Ferma", "ferma@example.com"),
-    ("Bioloģiskā saimniecība", "bio@example.com"),
-    ("Zemnieku saimniecība Kalni", "kalni@example.com"),
-    ("Dārzeņu audzētājs Sētas", "setas@example.com"),
-    ("Augļu dārzs Zaļais", "zalais@example.com"),
+    ("Lauku Ferma                           ", "ferma@example.com"),
+    ("Bioloģiskā saimniecība                ", "bio@example.com"),
+    ("Zemnieku saimniecība Kalni            ", "kalni@example.com"),
+    ("Dārzeņu audzētājs Sētas               ", "setas@example.com"),
+    ("Augļu dārzs Zaļais                    ", "zalais@example.com"),
     ("Piena pārstrādes uzņēmums Piensaimnieks", "piensaimnieks@example.com")
 ])
 
 cur.executemany("INSERT INTO produkti (nosaukums, kategorija) VALUES (?, ?)", [
-    ("Piens", "Piena produkti"),
-    ("Siers", "Piena produkti"),
-    ("Olas", "Olu produkti"),
-    ("Gaļa", "Gaļas produkti"),
-    ("Dārzeņi", "Dārzeņu produkti"),
-    ("Augļi", "Augļu produkti"),
-    ("Maize", "Maizes izstrādājumi"),
-    ("Medus", "Citi produkti"),
+    ("Piens.   ", "Piena produkti"),
+    ("Siers.   ", "Piena produkti"),
+    ("Olas.    ", "Olu produkti"),
+    ("Gaļa.    ", "Gaļas produkti"),
+    ("Dārzeņi. ", "Dārzeņu produkti"),
+    ("Augļi.   ", "Augļu produkti"),
+    ("Maize.   ", "Maizes izstrādājumi"),
+    ("Medus.   ", "Citi produkti"),
     ("Saldējums", "Citi produkti"),
-    ("Jogurts", "Piena produkti")
+    ("Jogurts. ", "Piena produkti")
 ])
 
 cur.executemany("INSERT INTO cenas (produkta_id, piegadataja_id, cena) VALUES (?, ?, ?)", [
@@ -117,7 +117,7 @@ cur.execute('''SELECT piegadataji.nosaukums, produkti.nosaukums, cenas.cena, iep
             AND iepirkumi.produkta_id = produkti.id 
             AND iepirkumi.piegadataja_id = piegadataji.id''')
 print("Iepirkumu saraksts:")
-print("Piegādātājs | Produkts | Cena | Daudzums")
+print("Piegādātājs                             | Produkts | Cena | Daudzums")
 rows = cur.fetchall()
 for row in rows:
     print(" | ".join(map(str, row)))
