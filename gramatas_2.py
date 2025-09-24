@@ -13,31 +13,28 @@ cur.execute("DROP TABLE IF EXISTS izsniegumi;")
 cur.execute("""
 CREATE TABLE IF NOT EXISTS lasitaji (
     lasitaja_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    vards TEXT NOT NULL,
-    telefons TEXT
-);
+    vards TEXT,
+    telefons TEXT)
 """)
 
 cur.execute("""
 CREATE TABLE IF NOT EXISTS gramatas (
     gramatas_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nosaukums TEXT NOT NULL,
-    autors TEXT NOT NULL,
+    nosaukums TEXT,
+    autors TEXT,
     gads INTEGER,
-    pieejama INTEGER DEFAULT 1   -- 1 = pieejama, 0 = izsniegta
-);
-""")
+    pieejama INTEGER DEFAULT 1 )
+""") #1 = pieejama, 0 = izsniegta
 
 cur.execute("""
 CREATE TABLE IF NOT EXISTS izsniegumi (
     izsnieguma_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    lasitaja_id INTEGER NOT NULL,
-    gramatas_id INTEGER NOT NULL,
-    izsniegts DATE NOT NULL,
+    lasitaja_id INTEGER,
+    gramatas_id INTEGER,
+    izsniegts DATE,
     atgriezts DATE,
     FOREIGN KEY(lasitaja_id) REFERENCES lasitaji(lasitaja_id),
-    FOREIGN KEY(gramatas_id) REFERENCES gramatas(gramatas_id)
-);
+    FOREIGN KEY(gramatas_id) REFERENCES gramatas(gramatas_id))
 """)
 
 
