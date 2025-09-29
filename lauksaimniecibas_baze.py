@@ -44,9 +44,9 @@ cur.executemany('''INSERT OR IGNORE INTO produkts (nosaukums, piezimes) VALUES(?
 cur.executemany('''INSERT OR IGNORE INTO piegade (id_saimnieks, id_produkts, daudzums, cena, piegades_datums) VALUES(?, ?, ?, ?, ?)''',[
             (1, 1, 100.0, 0.5, '2023-10-01'),
             (2, 2, 150.0, 0.7, '2023-10-02'),
-            (3, 3, 200.0, 0.6, '2023-10-03'),
-            (4, 4, 120.0, 1.0, '2023-10-04'),
-            (5, 5, 80.0, 1.5, '2023-10-05')])
+            (3, 3, 200.0, 0.6, '2024-09-03'),
+            (4, 4, 120.0, 1.0, '2022-11-04'),
+            (5, 5, 80.0, 1.5, '2021-10-05')])
 cur.execute('''SELECT saimnieks.vards, saimnieks.uzvards, produkts.nosaukums, piegade.daudzums, piegade.cena, piegade.piegades_datums
             FROM piegade
             JOIN saimnieks ON piegade.id_saimnieks = saimnieks.id_saimnieks
@@ -78,5 +78,15 @@ rows = cur.fetchall()
 for row in rows:
     print(" ".join(map(str, row)))
 
+cur.execute('''SELECT saimnieks.vards, saimnieks.uzvards, piegade.piegades_datums
+            FROM piegade
+            JOIN saimnieks ON piegade.id_saimnieks = saimnieks.id_saimnieks
+            JOIN produkts ON piegade.id_produkts = produkts.id_produkts
+            WHERE piegade.piegades_datums > '2023-10-01'
+            ''')
+print("\nPiegādes pēc datuma")
+rows = cur.fetchall()
+for row in rows:
+    print(" ".join(map(str, row)))
 cur.close()
 conn.commit()
