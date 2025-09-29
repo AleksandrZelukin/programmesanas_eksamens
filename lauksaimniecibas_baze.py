@@ -58,7 +58,25 @@ rows = cur.fetchall()
 for row in rows:
     print(" ".join(map(str, row)))
 
+cur.execute('''SELECT SUM(piegade.daudzums), produkts.nosaukums
+            FROM piegade
+            JOIN produkts ON piegade.id_produkts = produkts.id_produkts
+            GROUP BY produkts.nosaukums
+            ''')
+print("\nKopējais daudzums pēc produkta")
+rows = cur.fetchall()
+for row in rows:
+    print(" ".join(map(str, row)))
 
+cur.execute('''SELECT AVG(piegade.cena), produkts.nosaukums
+            FROM piegade
+            JOIN produkts ON piegade.id_produkts = produkts.id_produkts
+            GROUP BY produkts.nosaukums   
+            ''')
+print("\nVidējā cena pēc produkta")
+rows = cur.fetchall()
+for row in rows:
+    print(" ".join(map(str, row)))
+
+cur.close()
 conn.commit()
-conn.close()
-            
