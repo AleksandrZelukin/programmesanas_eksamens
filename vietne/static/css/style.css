@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(186, 104, 214);
+}
+div {
+    padding: 1em;
+    border-bottom: 1px solid #eee;
+}
